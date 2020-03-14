@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import Free Font Awesome Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!--Import my styles.css-->
+  <link rel="stylesheet" href="public/css/style.css">
+  <!--Manifest JSON-->
+  <title>MoreWeather</title>
+</head>
+
+<body>
+
+  <div class="add-UF section scrollspy">
+    <div class="container">
+      <div class="card contents z-depth-1">
+        <div class="row">
+          <div class="weather-UF col s12 l4">
+            <div class="center title-container">
+              <h1 class="title-container__title">Weather Finder</h1>
+              <p class="title-container__subtitle">Find the temperature, condition of your region.</p>
+            </div>
+          </div>
+          <div class="col s12 l4 offset-l2 form-UF">
+            <form class="col s12">
+              <h5 class="center">Cadastre um Municipio: </h5>
+              <div class="input-field">
+                <label for="ibge">Cod IBGE</label>
+                <input type="text" list="citysIBGE" name="ibge" id="ibge" class="validate" required="required">
+              </div>
+              <div class="input-field">
+                <label for="cityName">Nome da cidade </label>
+                <input type="text" id="cityName" name="cityName" class="validate" required="required">
+              </div>
+              <div class="input-field">
+                <label for="state">Estado </label>
+                <input type="text" id="state" name="state" class="validate" required="required">
+              </div>
+              <div class="input-field">
+                <label for="note">Observção </label>
+                <textarea id="note" class="materialize-textarea validate" required="required"
+                  data-length="120"></textarea>
+              </div>
+              <div class="input-field">
+                <input class="btn btn-form right orange darken-3" type="submit" value="Adicionar">
+              </div>
+            </form>
+          </div>
+          <div class="col s12 l6 offset-l1 tableCounties">
+            <table class="tab centered">
+              <thead>
+                <tr>
+                  <th class="orange-text text-darken3 center">Cod IBGE</th>
+                  <th class="orange-text text-darken3 center">Municipio</th>
+                  <th class="orange-text text-darken3 center">Estado</th>
+                  <th class="orange-text text-darken3 center">Prev. Tempo</th>
+                  <th class="orange-text text-darken3 center">Observação</th>
+                  <th class="orange-text text-darken3 center">Opções</th>
+                </tr>
+              </thead>
+              <tbody id="listCounties">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal1" class="modal">
+    <div id="modal-content" class="modal-content">
+      <div class="weather__info">
+        <form class="tempT col s12 l4">
+          <label for="tagCityName">Insira o nome da Cidade</label>
+          <input type="text" id="tagCityName">
+          <button class="tempDetails btn">Gerar Info.</button>
+        </form>
+        <p class="name"></p>
+        <p class="country"></p>
+        <p class="temp"></p>
+        <p class="humidity"></p>
+        <p class="description"></p>
+      </div>
+    </div>
+    <div id="modal-footer" class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-red btn-flat right">Fechar</a>
+    </div>
+  </div>
+  <datalist id="citysIBGE"><datalist>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- My Scripts-->
+      <script src="public/js/datalist.js"></script>
+      <script src="public/js/jQuery.js"></script>
+      <script src="public/js/main.js"></script>
+      <script src="public/js/weather.js"></script>
+</body>
+
+</html>
